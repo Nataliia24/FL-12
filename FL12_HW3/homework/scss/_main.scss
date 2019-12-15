@@ -1,0 +1,246 @@
+// Write your style
+@mixin rule ($height, $width, $left, $top) {
+    content: "";
+    background-color: $backgroundWord;
+    height: $height;
+    width: $width;
+    left: $left;
+    top: $top;
+    display: block;
+    z-index: -1;
+    position: absolute;
+
+}
+
+body {
+    background-color: $bodyBgColor;
+    margin: 0;
+    padding: 0;
+    font-family: $font;
+}
+
+.header {
+    background-image: $headerBackground;
+    background-size: cover;
+    background-position: center;
+    height: 720px;
+    border-radius: 0 0 40% 0;
+    padding: 0 180px;
+
+    .landing-logo {
+        display: flex;
+        align-items: center;
+
+        img {
+            width: 45px;
+            height: 45px;
+        }
+
+        p {
+            color: $colorTitle;
+            padding-left: 20px;
+            font-size: 25px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        span {
+            color: $colorTitle;
+            font-size: 10px;
+            display: block;
+        }
+    }
+    
+    &_heading  {
+        width: 490px;
+        font-size: 60px;
+        font-weight: bold;
+        line-height: 0.8;
+        color: $colorTitle;
+        position: relative;
+        z-index: 1;
+
+        &::after {
+            @include rule(42px, 255px, 0px, 50px)
+        }
+    }
+
+    &_text {
+        color: $colorHeader;
+        font-size: 16px;
+        line-height: 1.5;
+        white-space: pre-line;
+    }
+
+    a {
+        margin-left: 150px;
+        color: $bodyBgColor;
+        font-size: 20px;
+    }
+}
+
+button {
+    width: 145px;
+    height: 50px;
+    border-radius: 5px;
+    background-color: $backgroundBtn;
+    font-weight: bold;
+    font-size: 18px;
+    color: $bodyBgColor;
+
+    &:hover {
+        background-color: lighten($backgroundBtn, 15%);
+        cursor: pointer;
+    }
+
+    &.header_button {
+        margin-top: 65px;
+    }
+}
+
+.section {
+    padding: 0;
+
+    &_text {
+        color: $colorTitle;
+        font-size: 35px;
+        font-weight: bold;
+        text-align: center;
+
+        &::after {
+            @include rule(53px, 160px, 685px, 750px)
+        }
+
+ }
+
+ &_card {
+     display: flex;
+     flex-grow: 1;
+     width: 60%;
+     background-color: $backgroundCard;
+     text-align: center;
+     padding: 10px;
+     border-radius: 5px;
+     margin: 20px auto;
+     color: $colorCard;
+
+     &_img {
+         width: 450px;
+         border-radius: 5px;
+     }
+
+     &_right_container {
+        padding: 20px 50px; 
+        box-sizing: border-box;
+     }
+
+     &_heading {
+         font-size: 25px;
+         text-align: center;
+         font-weight: bold;
+     }
+
+     &_text {
+         color: $colorText;
+         text-align: justify;
+         width: 465px;
+         margin-bottom: 35px;
+     }
+ }
+
+ a {
+    font-size: 15px;
+    color: $colorText;
+}
+
+&_banner {
+    display: flex;
+    justify-content: center;
+    justify-content: space-between;
+    justify-content: space-around;
+    background-image: linear-gradient(to right, map-get($bannerGradient, 'start'), map-get($bannerGradient, 'end'));
+    width: 70%;
+    margin: 0 auto;
+    border-radius: 5px;
+    position: relative;
+    top: 100px;
+    
+    &_text {
+        color: $colorText;
+        font-size: 13px;
+        margin-bottom: 45px;
+
+        &_wrap {
+            display: flex;
+            flex-direction: column;
+            margin-left: 30px;
+    }
+}
+
+&_heading {
+    font-size: 25px;
+    color: $colorHeader;
+    font-weight: bold;
+    z-index: 1;
+    position: relative;
+    margin: 0;
+    margin-top: 25px;
+
+    &::after {
+        @include rule(45px, 55px, 100px, -6px)
+    }
+}
+
+&_button {
+    margin-top: 50px;
+}
+}
+
+}
+
+.footer {
+    background-color: $backgroundCard;
+    padding: 140px 100px 0;
+    color: $colorText;
+
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+
+    &_logo {
+        display: flex;
+        align-items: center;
+        
+        img {
+            width: 45px;
+            height: 45px;
+        }
+
+        p {
+            color: $colorText;
+            padding-left: 20px;
+            font-size: 25px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        span {
+            color: $colorText;
+            font-size: 10px;
+            display: block;
+        }
+    }
+
+    &_text {
+        @extend .footer-cr;
+        width: 200px;
+        line-height: 1;
+    }
+    &-cr {
+        font-size: 10px;
+    }
+}
+
