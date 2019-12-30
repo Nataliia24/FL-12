@@ -16,7 +16,7 @@ if (!play) {
     while (won) {
         let random = Math.floor(Math.random() * (maxNumber + 1));
         let t = false;
-        for (let i = 1; i > 0; i++) {
+        for (let i = 1; ; i++) {
             let userNumber = +prompt(`Choose a roulette pocket number from ${minNumber} to ${maxNumber}
             \nAttempts left: ${attempt-1}
             \nTotal price: ${prize}

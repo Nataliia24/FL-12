@@ -1,16 +1,19 @@
+let minEmail = 5;
+let minPass = 6;
 let email = prompt('Enter your email', '');
 
 if (email === '' || email === null) {
     alert('Canceled');
-} else if (email.length < 5) {
+} else if (email.length < minEmail) {
     alert("I don't know any emails having name length less than 5 symbols");
 } else if (email !== 'user@gmail.com' && email !== 'admin@gmail.com') {
-    alert("I don’t know you")
+    alert('I don’t know you')
 } else {
     let password = prompt('Enter your password', '');
     if (password ==='' || password === null) {
-        alert('Canceled')
-    } else if (email === 'user@gmail.com' && password !== 'UserPass' || email === 'admin@gmail.com' && password !== 'AdminPass') {
+        alert('Canceled');
+    } else if (email === 'user@gmail.com' && password !== 'UserPass' || 
+    email === 'admin@gmail.com' && password !== 'AdminPass') {
         alert('Wrong password')
     } else {
         let cpassword = confirm('Do you want to change your password?');
@@ -20,11 +23,12 @@ if (email === '' || email === null) {
             let oldpass = prompt('Enter old password', '');
             if (oldpass === '' || oldpass === null) {
                 alert('Canceled');
-            } else if (email === 'user@gmail.com' && password !== 'UserPass' || email === 'admin@gmail.com' && password !== 'AdminPass') {
+            } else if (email === 'user@gmail.com' && password !== 'UserPass' || 
+            email === 'admin@gmail.com' && password !== 'AdminPass') {
                 alert('Wrong password');
             } else {
                 let newpass = prompt('Enter new password', '');
-                if (newpass.length < 6) {
+                if (newpass.length < minPass) {
                     alert('It’s too short password. Sorry');
                 } else {
                     let confirmNewPass = prompt('Confirm your new password', '');
