@@ -1,0 +1,35 @@
+.folder_img {
+    color: #efc429;
+}
+
+.file_img {
+    color: #989292;
+}
+
+p {
+    font-size: 20px;
+}
+
+.item {
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.item:hover {
+    background-color: #EFEFEF;
+}
+
+.folder_items {
+    margin-left: 15px;
+}
+
+.hide {
+    display: none;
+}
+
+.italic {
+    font-style: italic;
+}
