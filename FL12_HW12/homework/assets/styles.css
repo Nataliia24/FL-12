@@ -1,0 +1,81 @@
+/* Your styles go here */
+
+.header {
+    display: flex;
+}
+
+.btn {
+    padding: 10px 20px;
+    border-radius: 5px;
+    outline: none;
+    background-color: #fff;
+    transition: all, linear .3s;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.header .header_btn {
+    border: 2px solid #00b2ff;
+    color: #00b2ff;
+}
+
+.header .header_btn:hover {
+    background-color: #00b2ff;
+    color: #fff;
+}
+
+.list {
+    padding: 10px 50px;
+    list-style-type: none;
+}
+
+.list .list_item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #00b2ff;
+    border-radius: 6px;
+    padding: 10px 30px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+.list .ready {
+    background-color: rgba(0, 191, 255, .7);
+}
+
+.list .edit_btn {
+    border: 2px solid #000d80;
+    margin-right: 10px;
+    color: #000d80;
+}
+
+.list .remove_btn {
+    border: 2px solid #ca0505;
+    color: #ca0505;
+}
+
+.editPage input {
+    margin-right: 15px;
+    border: none;
+    outline: none;
+    border: 2px solid #000;
+    border-radius: 5px;
+    padding: 4px 10px;
+}
+
+.editPage input:focus {
+    padding-bottom: 3px;
+    border-bottom-width: 3px;
+}
+
+.editPage .save_btn {
+    border: 2px solid#000d80;
+    color: #000d80;
+    margin-right: 5px;
+}
+
+.editPage .cancel_btn {
+    border: 2px solid #ca0505;
+    color: #ca0505;
+}
